@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+	<wb-module deploy-name="EjemploCDI-EAR-0.0.1-SNAPSHOT">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
+		<wb-resource deploy-path="/" source-path="/src/main/application" tag="defaultRootSource"/>
+        <dependent-module archiveName="EjemploCDI-WEB.war" deploy-path="/" handle="module:/resource/EjemploCDI-WEB/EjemploCDI-WEB">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="EjemploCDI-EJB.jar" deploy-path="/" handle="module:/resource/EjemploCDI-EJB/EjemploCDI-EJB">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="EjemploCDI-EJB2.jar" deploy-path="/" handle="module:/resource/EjemploCDI-EJB2/EjemploCDI-EJB2">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="EjemploCDI-EJB3.jar" deploy-path="/" handle="module:/resource/EjemploCDI-EJB3/EjemploCDI-EJB3">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="log4j-1.2.12.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/log4j/log4j/1.2.12/log4j-1.2.12.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+	</wb-module>
+</project-modules>

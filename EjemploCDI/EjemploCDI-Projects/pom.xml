@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>EjemploCDI</artifactId>
+		<groupId>EjemploCDI</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>EjemploCDI-Projects</artifactId>
+	<packaging>pom</packaging>
+
+	<name>EjemploCDI</name>
+
+	<modules>
+		<module>EjemploCDI-WEB</module>
+		<module>EjemploCDI-EAR</module>
+		<module>EjemploCDI-EJB</module>
+		<module>EjemploCDI-EJB2</module>
+		<module>EjemploCDI-EJB3</module>
+	</modules>
+</project>

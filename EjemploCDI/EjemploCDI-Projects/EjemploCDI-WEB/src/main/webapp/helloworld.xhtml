@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Ejemplo CDI</title>
+</h:head>
+
+<h:body>
+	<h:form>
+		<p:panel header="EjemploCDI-EJB">
+			<h:panelGrid columns="2" cellpadding="4">
+				<h:commandButton value="Invocar EJB"
+					action="#{MensajeJavaBean.invocarEJB()}"></h:commandButton>
+				<h:inputText id="idResultado" value="#{MensajeJavaBean.resultado}"></h:inputText>
+			</h:panelGrid>
+		</p:panel>
+		<p:panel header="EjemploCDI-EJB2">
+			<h:panelGrid columns="2" cellpadding="4">
+				<h:commandButton value="Invocar EJB 2"
+					action="#{Mensaje2JavaBean.invocar2EJB()}"></h:commandButton>
+				<h:inputText id="idResultado2" value="#{Mensaje2JavaBean.resultado}"></h:inputText>
+			</h:panelGrid>
+		</p:panel>
+		<p:panel header="EjemploCDI-EJB3">
+			<h:panelGrid columns="2" cellpadding="4">
+				<h:commandButton value="Invocar EJB 3"
+					action="#{Mensaje3JavaBean.invocar3EJB()}"></h:commandButton>
+				<h:inputText id="idResultado3" value="#{Mensaje3JavaBean.resultado}"></h:inputText>
+			</h:panelGrid>
+		</p:panel>
+		<p:panel header="EjemploCDI-EJB3 - llama a EJB3">
+			<h:panelGrid columns="2" cellpadding="4">
+				<h:commandButton value="Invocar EJB 3 con EJB mismo proyecto"
+					action="#{Mensaje4JavaBean.invocar4EJB()}"></h:commandButton>
+				<h:inputText id="idResultado4" value="#{Mensaje4JavaBean.resultado}"></h:inputText>
+			</h:panelGrid>
+		</p:panel>
+		<p:panel header="EjemploCDI-EJB3 - llama a EJB2">
+			<h:panelGrid columns="2" cellpadding="4">
+				<h:commandButton value="Invocar EJB 3 con EJB otro proyecto"
+					action="#{Mensaje5JavaBean.invocar5EJB()}"></h:commandButton>
+				<h:inputText id="idResultado5" value="#{Mensaje5JavaBean.resultado}"></h:inputText>
+			</h:panelGrid>
+		</p:panel>
+	</h:form>
+</h:body>
+</html>

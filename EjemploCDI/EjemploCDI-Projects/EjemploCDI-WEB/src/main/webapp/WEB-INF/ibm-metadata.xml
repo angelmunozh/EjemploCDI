@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ibm-metadata>
+	<annotated-classes name="javax.faces.webapp.FacesServlet" />
+	<!-- <annotated-classes name="org.richfaces.webapp.ResourceServlet"/> -->
+</ibm-metadata>

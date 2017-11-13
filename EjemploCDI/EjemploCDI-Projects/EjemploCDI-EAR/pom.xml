@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>EjemploCDI-Projects</artifactId>
+		<groupId>EjemploCDI</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>EjemploCDI-EAR</artifactId>
+	<packaging>ear</packaging>
+	<name>EjemploCDI-EAR</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<build>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<version>6</version>
+					<defaultLibBundleDir>lib</defaultLibBundleDir>
+					<modules>
+						<webModule>
+							<groupId>EjemploCDI</groupId>
+							<artifactId>EjemploCDI-WEB</artifactId>
+							<bundleFileName>EjemploCDI-WEB.war</bundleFileName>
+							<contextRoot>/EjemploCDI-WEB</contextRoot>
+						</webModule>
+						<ejbModule>
+							<groupId>EjemploCDI</groupId>
+							<artifactId>EjemploCDI-EJB</artifactId>
+							<bundleFileName>EjemploCDI-EJB.jar</bundleFileName>
+						</ejbModule>
+						<ejbModule>
+							<groupId>EjemploCDI</groupId>
+							<artifactId>EjemploCDI-EJB2</artifactId>
+							<bundleFileName>EjemploCDI-EJB2.jar</bundleFileName>
+						</ejbModule>
+						<ejbModule>
+							<groupId>EjemploCDI</groupId>
+							<artifactId>EjemploCDI-EJB3</artifactId>
+							<bundleFileName>EjemploCDI-EJB3.jar</bundleFileName>
+						</ejbModule>
+					</modules>
+					<displaName>EjemploCDIEARDeploy</displaName>
+					<generateApplicationXml>true</generateApplicationXml>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>EjemploCDI</groupId>
+			<artifactId>EjemploCDI-EJB</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>ejb</type>
+		</dependency>
+		<dependency>
+			<groupId>EjemploCDI</groupId>
+			<artifactId>EjemploCDI-WEB</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>war</type>
+		</dependency>
+		<dependency>
+			<groupId>EjemploCDI</groupId>
+			<artifactId>EjemploCDI-EJB2</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>ejb</type>
+		</dependency>
+		<dependency>
+			<groupId>EjemploCDI</groupId>
+			<artifactId>EjemploCDI-EJB3</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>ejb</type>
+		</dependency>
+	</dependencies>
+</project>
